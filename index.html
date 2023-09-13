@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Your Fitness Tracker</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hello there, track one of these:</h1>
+    </header>
+    <main>
+      <div class="dropdown">
+        <select id="activityDropdown" onchange="navigateToPage()">
+          <option value="" disabled selected>Select an activity</option>
+          <option value="diet.html">Diet</option>
+          <option value="gym.html">Gym</option>
+          <option value="sleep.html">Sleep</option>
+        </select>
+      </div>
+    </main>
+    <script>
+      function navigateToPage() {
+        const selectedPage = document.getElementById("activityDropdown").value;
+        if (selectedPage) {
+          window.location.href = selectedPage;
+        }
+      }
+    </script>
+  </body>
+</html>
